@@ -1,0 +1,86 @@
+:root {
+  --blue-sky: #788BFF;
+  --main-color: #FFFFFF;
+  --second-blue: #DEE3FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+header {
+  background-color: var(--blue-sky);
+  color: var(--main-color);
+  padding: 30px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+}
+
+main {
+  min-height: calc(100vh - 100px);
+}
+
+/* .side-bar {
+  display: block;
+  background-color: var(--second-blue);
+  width: 300px;
+  min-width: 250px;
+  padding: 20px;
+  height: inherit;
+} */
+
+footer {
+  background-color: var(--blue-sky);
+  /* padding: 10px; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.add-btn {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--main-color);
+  background-color: var(--blue-sky);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inbox {
+  width: 900px;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.inbox_title {
+  font-size: 2em;
+  /* margin-bottom: 20px; */
+  letter-spacing: 1px;
+  font-weight: 1000;
+  color: #333;
+}
