@@ -1,20 +1,33 @@
-class Task {
-  constructor(task, description='', priority='normal', date='No Date') {
-    this.task = task;
-    this.date = date;
-    this.description = description;
-    this.priority = priority;
-    this.complete = false;
-  }
-} 
+import TasksList from "./cards";
+import { makeInbox, Task, addTask } from "./inbox";
 
-function makeInbox() {
+let projects = [];
+
+const add_project = document.querySelector('.add-project');
+const projects_place = document.querySelector('.projects-place');
+ 
+export const addProject = () => {
+  let name = document.getElementById('input-project').value;
+
+  if (name == "" || projects.includes(name)) {
+    return;
+  }
+  projects.push(name);
+
+  const project = document.createElement('button');
+  project.classList.add('project');
+  project.textContent = name;
+
+  projects_place.appendChild(project);
+}
+
+export function makeProject(name) {
   const container = document.createElement('div');
   container.classList.add('inbox');
 
   const title = document.createElement('h1');
   title.classList.add('inbox_title');
-  title.textContent = 'Inbox';
+  title.textContent = name;
 
   const tasksPlace = document.createElement('div');
   tasksPlace.classList.add('tasks-place');
@@ -36,19 +49,3 @@ function makeInbox() {
   return container;
 }
 
-function addTask() {
-  const task_title = document.getElementById('title').value;
-  const details = document.getElementById('details').value;
-  const task = new Task(task_title, details);
-
-  console.log(task);
-  return task;
-}
-
-function loadInbox() {
-  const main = document.getElementById('main');
-  main.textContent = '';
-  main.appendChild(makeInbox());
-}
-
-export { addTask, loadInbox, makeInbox, Task} ;

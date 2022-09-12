@@ -2,11 +2,11 @@
   --blue-sky: #788BFF;
   --main-color: #FFFFFF;
   --second-blue: #DEE3FF;
-  --light-one: #f8f9ff;
+  --light-one: #e9ecff;
   --form-hfont: 20px;
   --form-cfont: 15px;
   --h-big: clamp(20px, 3vw, 40px);
-  --button-font: clamp(10px, 4vw, 17px);
+  --button-font: clamp(10px, 3vw, 17px);
   --buton-width: clamp(20px, 3vw, 100px);
   --padding-header: clamp(7px, 20px, 30px)
 }
@@ -195,8 +195,48 @@ svg {
 #inbox-side-btn {
   border: none;
   background-color: var(--second-blue);
+  width: clamp(50px, 5vw, 70px);
+  font-size: var(--button-font);
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.side-bar button:hover {
+.add-project {
+  border: none;
   background-color: var(--light-one);
+  width: clamp(50px, 15vw, 100px);
+  height: clamp(20px, 40px, 60px);
+  font-size: var(--button-font);
+  border-radius: 5px;
+}
+
+#inbox-side-btn:hover {
+  background-color: var(--light-one);
+}
+
+.projects-h {
+  font-size: clamp(16px, 2.5vw, 30px);
+  font-weight: 900;
+}
+
+#input-project {
+  margin-bottom: 10px;
+}
+
+.project {
+  /* width: clamp(50px, 5vw, 100px); */
+  font-size: var(--button-font);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.project:hover {
+  background-color: var(--light-one);
+}
+
+.projects-place {
+  display: flex;
+  flex-direction: column;
 }
